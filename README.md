@@ -8,13 +8,13 @@ Note that this repo is a temporary home until this plugin is included in the bas
 
 * [Islandora](https://github.com/Islandora-CLAW/islandora) a.k.a. CLAW
 
-## Usage
+## Installation
 
 This plugin needs to be placed in your Islandora site's `web/modules/contrib/islandora/src/Plugin/Condition` directory.
 
 ## Configuration
 
-Like any other Context condition. However, to limit this condition to Islandora objects, use it in conjuction with either the Node Bundle or Entity Bundle conditions provided by the core Islandora module, and be sure to check "Require all conditions."
+Works like any other Context condition. However, to limit this condition to Islandora objects, use it in conjuction with either the Node Bundle or Entity Bundle conditions provided by the core Islandora module, and be sure to check "Require all conditions."
 
 ## Maintainer
 
