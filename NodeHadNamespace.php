@@ -140,18 +140,15 @@ class NodeHadNamespace extends ConditionPluginBase implements ContainerFactoryPl
    *   TRUE if entity has the specified namespace, otherwise FALSE.
    */
   protected function evaluateEntity(EntityInterface $entity) {
-    // @todo: Make the entity type configurable.
-    if ($entity->getType() == 'islandora_object') {
-      if ($entity->hasField('field_pid')) {
-        $pid_value = $entity->get('field_pid')->getValue();
-        $pid = $pid_value[0]['value'];
-        $namespace = strtok($pid, ':') . ':';
-        $registered_namespaces = explode(',', $this->configuration['namespace']);
-        foreach ($registered_namespaces as &$registered_namespace) {
-          $registered_namespace = trim($registered_namespace);
-          if (in_array($namespace, $registered_namespaces)) {
-            return $this->isNegated() ? FALSE : TRUE;
-          }
+    if ($entity->hasField('field_pid')) {
+      $pid_value = $entity->get('field_pid')->getValue();
+      $pid = $pid_value[0]['value'];
+      $namespace = strtok($pid, ':') . ':';
+      $registered_namespaces = explode(',', $this->configuration['namespace']);
+      foreach ($registered_namespaces as &$registered_namespace) {
+        $registered_namespace = trim($registered_namespace);
+        if (in_array($namespace, $registered_namespaces)) {
+          return $this->isNegated() ? FALSE : TRUE;
         }
       }
     }
