@@ -4,6 +4,8 @@ Drupal 8 Context condition plugin that inspects a node's `field_pid` for the pre
 
 Note that this repo is a temporary home until this plugin is included in the base Islandora module, is packaged in its own module, etc. See the discussion at https://github.com/Islandora-CLAW/CLAW/issues/396 for more detail.
 
+Also note that Context Conditions now show up in all block visibility settings. This is [standard](https://www.drupal.org/node/2287827) Drupal 8 behavior.
+
 ## Requirements
 
 * [Islandora](https://github.com/Islandora-CLAW/islandora) a.k.a. CLAW
